@@ -39,6 +39,7 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'faker'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -51,10 +52,19 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  # gem 'capybara', '>= 2.15'
+  # gem 'selenium-webdriver'
+  # # Easy installation and use of web drivers to run system tests with browsers
+  # gem 'webdrivers'
+
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  gem 'headless'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+ 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
