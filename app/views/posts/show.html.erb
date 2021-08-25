@@ -5,12 +5,19 @@
 <div class="page-title">
       
 <span class ="page-title"><h2><%= @post.title %></h2>
- <div class="btn-group">
-            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
-            <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
-          </div>
 
-</div>
+ <p ><i class="fa fa-thumbs-up"></i><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? "Like" : "Likes" %>, 
+
+
+<% pre_like = @post.likes.find { |like| like.user_id == current_user.id } %>
+<% if pre_like %>
+You liked this post 
+  <%= button_to "Unlike", post_like_path(@post, pre_like), method: :delete, class: "btn btn-sm btn-primary fa fa-thumbs-down" %>
+<% else %>
+  <%= button_to "Like", post_likes_path(@post), method: :post, class: "btn btn-sm btn-default btn-hover-success" %>
+<% end %>
+</p>
+
 
   <div class="row blog">
   <div class="item-box-blog">
