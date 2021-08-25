@@ -1,0 +1,31 @@
+<div class="panel">
+  <div class="panel-body">
+  
+  <%= bootstrap_form_for([@post, @post.comments.build]) do |f| %>
+
+
+    <%= f.text_area :content,
+                    rows: 6,
+                    required: true,
+                    minlength: 20,
+                    maxlength: 1000,
+                    placeholder: "Leave a reply",
+                    class: "form-control" %>
+                    <%= f.hidden_field :parent_type, value: "POST"%>
+                    <%= f.hidden_field :parent_id, value: @post.id%>
+
+    <%= f.submit "Submit comments", class: "btn btn-sm btn-primary pull-right" %>
+ </div>
+  </div>
+
+<% end %>
+
+<%# <div class="panel">
+  <div class="panel-body">
+    <textarea class="form-control" rows="2" placeholder="Write a comment?"></textarea>
+    <div class="mar-top clearfix">
+      <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Submit comment</button>
+     
+    </div>
+  </div>
+</div> %>

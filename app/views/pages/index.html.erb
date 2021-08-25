@@ -3,7 +3,10 @@
 
 <div class="container cta-100 ">
 <div class="container">
-<span class ="page-title"><h2>All Posts</h2></span>
+<div class="row">
+<span class ="page-title col-sm-9 pull-left"><h2>All Posts</h2></span>
+  <div class="col-sm-3 pull-right">  <%= link_to "Create Post", new_post_path, class: "btn btn-md btn-primary" %> </div>
+    </div>
   <div class="row blog">
     <div class="col-md-12">
        <div class="carousel-inner">
