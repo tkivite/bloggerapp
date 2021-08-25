@@ -26,12 +26,15 @@ def seed_users
     users = User.all  
     users.each do |user|
       5.times do
-        Post.create(
+       P = Post.create(
           title: Faker::Lorem.sentences[0], 
           content: Faker::Lorem.sentences[0], 
           image: '', 
           user_id: user.id
         )
+        P.upload_image.attach(io: File.open(Rails.root.join('app','assets',
+          'images', 'sample.webp')),filename: p.id)
+         
       end
     end
   end
