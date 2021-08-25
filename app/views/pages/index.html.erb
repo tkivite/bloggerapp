@@ -1,11 +1,18 @@
+
+
+
+<div class="container cta-100 ">
 <div class="container">
-  <div class="row">
-    <div id="side-menu"  class="col-sm-3">
-    </div><!-- side-menu -->
+  <div class="row blog">
+    <div class="col-md-12">
+       <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <%= render @posts %>              
+            </div>
+          </div>
 
-    <div id="main-content" class="col-sm-9">
-     <%= render @posts %>
-    </div><!-- main-content -->
-
-  </div><!-- row -->
-</div><!-- container -->
+    </div>
+  </div>
+</div>
+</div>
