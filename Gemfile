@@ -39,6 +39,7 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'faker'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -63,6 +64,7 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+ 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.string :parent_type
       t.integer :parent_id
       t.belongs_to :post, index: true
+      t.belongs_to :user, index: true
 
       t.timestamps
     end

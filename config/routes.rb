@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     get 'login', to: 'devise/sessions#new'
     get 'signup', to: 'devise/registrations#new'
   end
+
+  resources :posts do
+   
+  end
 end
 
