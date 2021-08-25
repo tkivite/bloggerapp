@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_action :redirect_if_not_signed_in
     def show
         @post = Post.find(params[:id])
     end
