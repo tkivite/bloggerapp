@@ -69,8 +69,22 @@ def seed_users
       end
 
   end
+
+  def seed_likes
+    posts = Post.all
+    posts.each do |post|
+      5.times do
+        Like.create(         
+          post_id: post.id, 
+          user_id: rand(1..9)
+        )
+      end
+    end
+  end
+
   
   
   seed_users  
   seed_posts
   seed_comments
+  seed_likes
