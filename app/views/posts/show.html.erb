@@ -12,9 +12,9 @@
 <% pre_like = @post.likes.find { |like| like.user_id == current_user.id } %>
 <% if pre_like %>
 You liked this post 
-  <%= button_to "Unlike", post_like_path(@post, pre_like), method: :delete, class: "btn btn-sm btn-primary fa fa-thumbs-down" %>
+  <%= button_to "Unlike", post_like_path(@post, pre_like), method: :delete, class: "btn btn-sm btn-warning fa fa-thumbs-down" %>
 <% else %>
-  <%= button_to "Like", post_likes_path(@post), method: :post, class: "btn btn-sm btn-default btn-hover-success" %>
+  <%= button_to "Like", post_likes_path(@post), method: :post, class: "btn btn-sm btn-primary fa fa-thumbs-up" %>
 <% end %>
 </p>
 
