@@ -10,5 +10,9 @@ RSpec.describe Post, type: :model do
       association = described_class.reflect_on_association(:comments)
       expect(association.macro).to eq :has_many
     end
+    it 'has_many likes' do
+      association = described_class.reflect_on_association(:likes)
+      expect(association.macro).to eq :has_many
+    end
   end
 end

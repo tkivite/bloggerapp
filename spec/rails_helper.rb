@@ -4,10 +4,7 @@ require 'capybara/poltergeist'
 require 'factory_girl_rails'
 require 'capybara/rspec'
 
-config.include Devise::Test::IntegrationHelpers, type: :feature
-config.include FactoryGirl::Syntax::Methods
-Capybara.javascript_driver = :poltergeist
-Capybara.server = :puma
+
 
 ENV['RAILS_ENV'] ||= 'test'
 
@@ -42,6 +39,11 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+
+config.include Devise::Test::IntegrationHelpers, type: :feature
+config.include FactoryGirl::Syntax::Methods
+Capybara.javascript_driver = :poltergeist
+Capybara.server = :puma
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
