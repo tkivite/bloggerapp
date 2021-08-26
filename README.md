@@ -1,6 +1,6 @@
-# Project
+# Project Demo
 
-[project.com](https://project.com)
+[https://rails-bloggerapp.herokuapp.com/](https://rails-bloggerapp.herokuapp.com/)
 
 ## Install
 
