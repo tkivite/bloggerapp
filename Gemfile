@@ -14,15 +14,15 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # we need this to use bootstrap js
-gem 'jquery-rails'
 gem 'bootstrap_form'
+gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
 gem 'font-awesome-rails'
+gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -58,14 +58,13 @@ group :test do
   # # Easy installation and use of web drivers to run system tests with browsers
   # gem 'webdrivers'
 
-  gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
-  gem 'rails-controller-testing'
-  gem 'headless'
   gem 'capybara'
-  gem 'poltergeist'
   gem 'database_cleaner'
- 
+  gem 'factory_girl_rails'
+  gem 'headless'
+  gem 'poltergeist'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
